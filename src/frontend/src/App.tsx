@@ -7,6 +7,7 @@ import {
   createRoute,
   createRouter,
 } from "@tanstack/react-router";
+import AIAssistant from "./components/AIAssistant";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import AnnouncementsPage from "./pages/AnnouncementsPage";
@@ -32,6 +33,7 @@ const rootRoute = createRootRoute({
       </main>
       <Footer />
       <Toaster />
+      <AIAssistant />
     </div>
   ),
 });

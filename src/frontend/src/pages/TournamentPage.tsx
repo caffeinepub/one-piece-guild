@@ -247,7 +247,16 @@ export default function TournamentPage() {
           >
             <p>
               1. Send <strong style={{ color: "#FF2A3A" }}>₹50</strong> to UPI
-              ID: <strong style={{ color: "#FFD700" }}>onepiece@upi</strong>
+              ID:{" "}
+              <strong
+                style={{
+                  color: "#FFD700",
+                  fontSize: "1.05em",
+                  letterSpacing: "0.05em",
+                }}
+              >
+                9328343183
+              </strong>
             </p>
             <p>
               2. Include your{" "}
