@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    /* Gaming dark theme - dark mode only */
+    --background: 0.08 0.005 270;
+    --foreground: 0.96 0 0;
+    --card: 0.12 0.006 270;
+    --card-foreground: 0.96 0 0;
+    --popover: 0.12 0.006 270;
+    --popover-foreground: 0.96 0 0;
+    --primary: 0.45 0.22 25;
+    --primary-foreground: 0.96 0 0;
+    --secondary: 0.15 0.006 270;
+    --secondary-foreground: 0.96 0 0;
+    --muted: 0.15 0.006 270;
+    --muted-foreground: 0.65 0 0;
+    --accent: 0.55 0.25 25;
+    --accent-foreground: 0.96 0 0;
+    --destructive: 0.45 0.22 25;
+    --destructive-foreground: 0.96 0 0;
+    --border: 0.3 0.15 25;
+    --input: 0.15 0.006 270;
+    --ring: 0.45 0.22 25;
+    --chart-1: 0.55 0.25 25;
+    --chart-2: 0.65 0 0;
+    --chart-3: 0.45 0.15 25;
+    --chart-4: 0.35 0.1 25;
+    --chart-5: 0.75 0 0;
+    --sidebar: 0.1 0.005 270;
+    --sidebar-foreground: 0.96 0 0;
+    --sidebar-primary: 0.45 0.22 25;
+    --sidebar-primary-foreground: 0.96 0 0;
+    --sidebar-accent: 0.15 0.006 270;
+    --sidebar-accent-foreground: 0.96 0 0;
+    --sidebar-border: 0.3 0.15 25;
+    --sidebar-ring: 0.45 0.22 25;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Rajdhani", sans-serif;
+    background-color: #0b0b0d;
+    color: #f2f3f5;
+  }
+}
+
+@layer components {
+  .glow-red {
+    box-shadow: 0 0 15px #e0222f, 0 0 30px rgba(224, 34, 47, 0.3);
+  }
+
+  .glow-red-text {
+    text-shadow: 0 0 10px #ff2a3a, 0 0 20px rgba(255, 42, 58, 0.5);
+  }
+
+  .glow-red-border {
+    border-color: #d61f2d;
+    box-shadow: 0 0 8px rgba(214, 31, 45, 0.5), inset 0 0 8px
+      rgba(214, 31, 45, 0.1);
+  }
+
+  .card-gaming {
+    background: linear-gradient(135deg, #141519 0%, #1a1c20 100%);
+    border: 1px solid #6a0f16;
+    border-radius: 0.75rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card-gaming:hover {
+    border-color: #d61f2d;
+    box-shadow: 0 0 15px rgba(214, 31, 45, 0.4);
+  }
+
+  .btn-gaming {
+    background: linear-gradient(135deg, #d61f2d 0%, #a01520 100%);
+    color: #f2f3f5;
+    font-family: "Orbitron", sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.75rem 2rem;
+    border-radius: 0.375rem;
+    border: 1px solid #ff2a3a;
+    box-shadow: 0 0 15px rgba(224, 34, 47, 0.5);
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .btn-gaming:hover {
+    background: linear-gradient(135deg, #ff2a3a 0%, #d61f2d 100%);
+    box-shadow: 0 0 25px rgba(255, 42, 58, 0.7);
+    transform: translateY(-1px);
+  }
+
+  .input-gaming {
+    background: #141519;
+    border: 1px solid #6a0f16;
+    color: #f2f3f5;
+    border-radius: 0.375rem;
+    padding: 0.75rem 1rem;
+    width: 100%;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-family: "Rajdhani", sans-serif;
+    font-size: 1rem;
+  }
+
+  .input-gaming:focus {
+    outline: none;
+    border-color: #d61f2d;
+    box-shadow: 0 0 10px rgba(214, 31, 45, 0.5);
+  }
+
+  .input-gaming::placeholder {
+    color: #6b7280;
+  }
+
+  .heading-gaming {
+    font-family: "Orbitron", sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .nav-link {
+    font-family: "Orbitron", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #9aa0a6;
+    transition: color 0.3s ease;
+    position: relative;
+  }
+
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #d61f2d;
+    box-shadow: 0 0 8px #ff2a3a;
+    transition: width 0.3s ease;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    color: #f2f3f5;
+  }
+
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    width: 100%;
+  }
+
+  .rank-gold {
+    color: #ffd700;
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+  }
+  .rank-silver {
+    color: #c0c0c0;
+    text-shadow: 0 0 8px rgba(192, 192, 192, 0.6);
+  }
+  .rank-bronze {
+    color: #cd7f32;
+    text-shadow: 0 0 8px rgba(205, 127, 50, 0.6);
+  }
+}
+
+@layer utilities {
+  .text-red-glow {
+    color: #ff2a3a;
+    text-shadow: 0 0 10px #ff2a3a, 0 0 20px rgba(255, 42, 58, 0.5);
+  }
+
+  .border-red-glow {
+    border-color: #d61f2d;
+    box-shadow: 0 0 10px rgba(214, 31, 45, 0.4);
+  }
+}
+
+/* Particle animation */
+@keyframes ember-float {
+  0% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-60px) translateX(20px) scale(0.8);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-120px) translateX(-10px) scale(0.3);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 15px rgba(224, 34, 47, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(255, 42, 58, 0.8), 0 0 60px rgba(214, 31, 45, 0.3);
+  }
+}
+
+@keyframes text-pulse {
+  0%,
+  100% {
+    text-shadow: 0 0 10px #ff2a3a, 0 0 20px rgba(255, 42, 58, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 20px #ff2a3a, 0 0 40px rgba(255, 42, 58, 0.8), 0 0 60px
+      rgba(214, 31, 45, 0.4);
+  }
+}
+
+@keyframes slide-in-up {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes grid-move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+.animate-ember {
+  animation: ember-float 3s ease-in-out infinite;
+}
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+.animate-text-pulse {
+  animation: text-pulse 2s ease-in-out infinite;
+}
+.animate-slide-up {
+  animation: slide-in-up 0.6s ease-out forwards;
+}
+
+.hero-bg {
+  background-image: url("/assets/generated/hero-guild-bg.dim_1920x1080.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(11, 11, 13, 0.4) 0%,
+    rgba(11, 11, 13, 0.6) 50%,
+    rgba(11, 11, 13, 0.95) 100%
+  );
+}
+
+.gaming-grid-bg {
+  background-color: #0b0b0d;
+  background-image: linear-gradient(
+      rgba(214, 31, 45, 0.05) 1px,
+      transparent 1px
+    ), linear-gradient(90deg, rgba(214, 31, 45, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: grid-move 20s linear infinite;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0b0d;
+}
+::-webkit-scrollbar-thumb {
+  background: #6a0f16;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d61f2d;
+}
