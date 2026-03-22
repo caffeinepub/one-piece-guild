@@ -32,7 +32,7 @@ export default function JoinPage() {
   return (
     <div
       className="min-h-screen pt-20 pb-16 flex items-center justify-center gaming-grid-bg"
-      style={{ background: "#0B0B0D" }}
+      style={{ background: "#06060E" }}
     >
       <div className="max-w-md w-full mx-auto px-4">
         <motion.div
@@ -44,20 +44,20 @@ export default function JoinPage() {
           <div className="text-center mb-8">
             <UserPlus
               className="w-12 h-12 mx-auto mb-4"
-              style={{ color: "#D61F2D" }}
+              style={{ color: "#7C3AED" }}
             />
             <h1
               className="heading-gaming text-2xl"
               style={{
-                color: "#F2F3F5",
-                textShadow: "0 0 10px rgba(255,42,58,0.3)",
+                color: "#F0EEF8",
+                textShadow: "0 0 10px rgba(139,92,246,0.3)",
               }}
             >
               JOIN THE GUILD
             </h1>
             <p
               className="mt-2 text-sm"
-              style={{ color: "#9AA0A6", fontFamily: "'Rajdhani', sans-serif" }}
+              style={{ color: "#8080A0", fontFamily: "'Rajdhani', sans-serif" }}
             >
               Register as a member of ONE PIECE Free Fire Guild
             </p>
@@ -74,7 +74,7 @@ export default function JoinPage() {
                 className="block text-xs mb-2 tracking-widest"
                 style={{
                   fontFamily: "'Orbitron', sans-serif",
-                  color: "#9AA0A6",
+                  color: "#8080A0",
                 }}
               >
                 PLAYER NAME
@@ -95,7 +95,7 @@ export default function JoinPage() {
                 className="block text-xs mb-2 tracking-widest"
                 style={{
                   fontFamily: "'Orbitron', sans-serif",
-                  color: "#9AA0A6",
+                  color: "#8080A0",
                 }}
               >
                 PLAYER UID
@@ -116,7 +116,7 @@ export default function JoinPage() {
                 className="block text-xs mb-2 tracking-widest"
                 style={{
                   fontFamily: "'Orbitron', sans-serif",
-                  color: "#9AA0A6",
+                  color: "#8080A0",
                 }}
               >
                 GAME LEVEL
@@ -154,17 +154,17 @@ export default function JoinPage() {
           <div
             className="mt-6 p-4 rounded-lg text-center"
             style={{
-              background: "rgba(214,31,45,0.1)",
-              border: "1px solid #6A0F16",
+              background: "rgba(124,58,237,0.1)",
+              border: "1px solid #2D1B69",
             }}
           >
             <p
               className="text-xs"
-              style={{ color: "#9AA0A6", fontFamily: "'Rajdhani', sans-serif" }}
+              style={{ color: "#8080A0", fontFamily: "'Rajdhani', sans-serif" }}
             >
               By joining, you agree to follow guild rules and compete with
               honor. Guild UID:{" "}
-              <span style={{ color: "#FF2A3A" }}>3049611812</span>
+              <span style={{ color: "#8B5CF6" }}>3049611812</span>
             </p>
           </div>
         </motion.div>

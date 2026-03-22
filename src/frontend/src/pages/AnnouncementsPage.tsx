@@ -69,7 +69,7 @@ export default function AnnouncementsPage() {
     announcements.length > 0 ? announcements : sampleAnnouncements;
 
   return (
-    <div className="min-h-screen pt-20 pb-16" style={{ background: "#0B0B0D" }}>
+    <div className="min-h-screen pt-20 pb-16" style={{ background: "#06060E" }}>
       <div className="max-w-3xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -78,17 +78,17 @@ export default function AnnouncementsPage() {
         >
           <div>
             <div className="flex items-center gap-3">
-              <Megaphone className="w-6 h-6" style={{ color: "#D61F2D" }} />
+              <Megaphone className="w-6 h-6" style={{ color: "#7C3AED" }} />
               <h1
                 className="heading-gaming text-2xl"
-                style={{ color: "#F2F3F5" }}
+                style={{ color: "#F0EEF8" }}
               >
                 ANNOUNCEMENTS
               </h1>
             </div>
             <p
               className="text-sm mt-1"
-              style={{ color: "#9AA0A6", fontFamily: "'Rajdhani', sans-serif" }}
+              style={{ color: "#8080A0", fontFamily: "'Rajdhani', sans-serif" }}
             >
               Official updates from guild leadership
             </p>
@@ -114,7 +114,7 @@ export default function AnnouncementsPage() {
           >
             <h2
               className="heading-gaming text-sm mb-4"
-              style={{ color: "#F2F3F5" }}
+              style={{ color: "#F0EEF8" }}
             >
               POST ANNOUNCEMENT
             </h2>
@@ -125,7 +125,7 @@ export default function AnnouncementsPage() {
                   className="block text-xs mb-1 tracking-widest"
                   style={{
                     fontFamily: "'Orbitron', sans-serif",
-                    color: "#9AA0A6",
+                    color: "#8080A0",
                   }}
                 >
                   TITLE
@@ -145,7 +145,7 @@ export default function AnnouncementsPage() {
                   className="block text-xs mb-1 tracking-widest"
                   style={{
                     fontFamily: "'Orbitron', sans-serif",
-                    color: "#9AA0A6",
+                    color: "#8080A0",
                   }}
                 >
                   MESSAGE
@@ -166,7 +166,7 @@ export default function AnnouncementsPage() {
                   className="block text-xs mb-1 tracking-widest"
                   style={{
                     fontFamily: "'Orbitron', sans-serif",
-                    color: "#9AA0A6",
+                    color: "#8080A0",
                   }}
                 >
                   AUTHOR
@@ -198,8 +198,8 @@ export default function AnnouncementsPage() {
                   onClick={() => setShowForm(false)}
                   className="flex-1 py-2 rounded text-sm"
                   style={{
-                    border: "1px solid #6A0F16",
-                    color: "#9AA0A6",
+                    border: "1px solid #2D1B69",
+                    color: "#8080A0",
                     fontFamily: "'Orbitron', sans-serif",
                     fontSize: "0.7rem",
                     letterSpacing: "0.1em",
@@ -220,7 +220,7 @@ export default function AnnouncementsPage() {
           >
             <p
               style={{
-                color: "#9AA0A6",
+                color: "#8080A0",
                 fontFamily: "'Orbitron', sans-serif",
                 fontSize: "0.7rem",
               }}
@@ -243,8 +243,8 @@ export default function AnnouncementsPage() {
                   <h3
                     className="heading-gaming text-sm flex-1"
                     style={{
-                      color: "#F2F3F5",
-                      textShadow: "0 0 8px rgba(255,42,58,0.2)",
+                      color: "#F0EEF8",
+                      textShadow: "0 0 8px rgba(139,92,246,0.2)",
                     }}
                   >
                     {ann.title}
@@ -252,7 +252,7 @@ export default function AnnouncementsPage() {
                   <span
                     className="text-xs flex-shrink-0"
                     style={{
-                      color: "#9AA0A6",
+                      color: "#8080A0",
                       fontFamily: "'Rajdhani', sans-serif",
                     }}
                   >
@@ -262,7 +262,7 @@ export default function AnnouncementsPage() {
                 <p
                   className="text-sm leading-relaxed mb-3"
                   style={{
-                    color: "#B0B6BD",
+                    color: "#A0A0C0",
                     fontFamily: "'Rajdhani', sans-serif",
                     lineHeight: 1.6,
                   }}
@@ -274,13 +274,13 @@ export default function AnnouncementsPage() {
                     className="h-px flex-1"
                     style={{
                       background:
-                        "linear-gradient(to right, #6A0F16, transparent)",
+                        "linear-gradient(to right, #2D1B69, transparent)",
                     }}
                   />
                   <span
                     className="text-xs px-2"
                     style={{
-                      color: "#D61F2D",
+                      color: "#7C3AED",
                       fontFamily: "'Orbitron', sans-serif",
                       fontSize: "0.65rem",
                       letterSpacing: "0.1em",

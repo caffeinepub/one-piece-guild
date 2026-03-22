@@ -10,7 +10,7 @@ const RankBadge = ({ rank }: { rank: number }) => {
     <span
       className="heading-gaming text-sm"
       style={{
-        color: "#9AA0A6",
+        color: "#8080A0",
         width: "20px",
         display: "inline-block",
         textAlign: "center",
@@ -66,7 +66,7 @@ export default function LeaderboardPage() {
   const displayPlayers = players.length > 0 ? players : samplePlayers;
 
   return (
-    <div className="min-h-screen pt-20 pb-16" style={{ background: "#0B0B0D" }}>
+    <div className="min-h-screen pt-20 pb-16" style={{ background: "#06060E" }}>
       <div className="max-w-4xl mx-auto px-4">
         {/* Header */}
         <motion.div
@@ -84,15 +84,15 @@ export default function LeaderboardPage() {
           <h1
             className="heading-gaming text-3xl"
             style={{
-              color: "#F2F3F5",
-              textShadow: "0 0 15px rgba(255,42,58,0.3)",
+              color: "#F0EEF8",
+              textShadow: "0 0 15px rgba(139,92,246,0.3)",
             }}
           >
             LEADERBOARD
           </h1>
           <p
             className="text-sm mt-2"
-            style={{ color: "#9AA0A6", fontFamily: "'Rajdhani', sans-serif" }}
+            style={{ color: "#8080A0", fontFamily: "'Rajdhani', sans-serif" }}
           >
             ONE PIECE Guild Rankings — Sorted by Game Level
           </p>
@@ -117,7 +117,7 @@ export default function LeaderboardPage() {
               <p
                 className="font-bold mt-1 text-sm"
                 style={{
-                  color: "#F2F3F5",
+                  color: "#F0EEF8",
                   fontFamily: "'Orbitron', sans-serif",
                   fontSize: "0.7rem",
                 }}
@@ -127,7 +127,7 @@ export default function LeaderboardPage() {
               <p className="heading-gaming text-lg rank-silver">
                 {String(displayPlayers[1].gameLevel)}
               </p>
-              <p className="text-xs" style={{ color: "#9AA0A6" }}>
+              <p className="text-xs" style={{ color: "#8080A0" }}>
                 LVL
               </p>
             </div>
@@ -149,7 +149,7 @@ export default function LeaderboardPage() {
               <p
                 className="font-bold mt-1"
                 style={{
-                  color: "#F2F3F5",
+                  color: "#F0EEF8",
                   fontFamily: "'Orbitron', sans-serif",
                   fontSize: "0.7rem",
                 }}
@@ -159,7 +159,7 @@ export default function LeaderboardPage() {
               <p className="heading-gaming text-2xl rank-gold">
                 {String(displayPlayers[0].gameLevel)}
               </p>
-              <p className="text-xs" style={{ color: "#9AA0A6" }}>
+              <p className="text-xs" style={{ color: "#8080A0" }}>
                 LVL
               </p>
             </div>
@@ -175,7 +175,7 @@ export default function LeaderboardPage() {
               <p
                 className="font-bold mt-1 text-sm"
                 style={{
-                  color: "#F2F3F5",
+                  color: "#F0EEF8",
                   fontFamily: "'Orbitron', sans-serif",
                   fontSize: "0.7rem",
                 }}
@@ -185,7 +185,7 @@ export default function LeaderboardPage() {
               <p className="heading-gaming text-lg rank-bronze">
                 {String(displayPlayers[2].gameLevel)}
               </p>
-              <p className="text-xs" style={{ color: "#9AA0A6" }}>
+              <p className="text-xs" style={{ color: "#8080A0" }}>
                 LVL
               </p>
             </div>
@@ -200,7 +200,7 @@ export default function LeaderboardPage() {
           >
             <p
               style={{
-                color: "#9AA0A6",
+                color: "#8080A0",
                 fontFamily: "'Orbitron', sans-serif",
                 fontSize: "0.7rem",
               }}
@@ -218,30 +218,30 @@ export default function LeaderboardPage() {
           >
             <div
               className="px-6 py-4"
-              style={{ borderBottom: "1px solid #6A0F16" }}
+              style={{ borderBottom: "1px solid #2D1B69" }}
             >
               <div className="grid grid-cols-12 gap-2">
                 <div
                   className="col-span-1 heading-gaming text-xs"
-                  style={{ color: "#9AA0A6" }}
+                  style={{ color: "#8080A0" }}
                 >
                   RANK
                 </div>
                 <div
                   className="col-span-5 heading-gaming text-xs"
-                  style={{ color: "#9AA0A6" }}
+                  style={{ color: "#8080A0" }}
                 >
                   PLAYER
                 </div>
                 <div
                   className="col-span-4 heading-gaming text-xs"
-                  style={{ color: "#9AA0A6" }}
+                  style={{ color: "#8080A0" }}
                 >
                   UID
                 </div>
                 <div
                   className="col-span-2 heading-gaming text-xs text-right"
-                  style={{ color: "#9AA0A6" }}
+                  style={{ color: "#8080A0" }}
                 >
                   LEVEL
                 </div>
@@ -254,7 +254,7 @@ export default function LeaderboardPage() {
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.05 }}
-                  whileHover={{ backgroundColor: "rgba(214,31,45,0.05)" }}
+                  whileHover={{ backgroundColor: "rgba(124,58,237,0.05)" }}
                   className="px-6 py-4 grid grid-cols-12 gap-2 items-center cursor-default"
                   style={{
                     borderBottom: "1px solid rgba(106,15,22,0.4)",
@@ -281,7 +281,7 @@ export default function LeaderboardPage() {
                               ? "#C0C0C0"
                               : i === 2
                                 ? "#CD7F32"
-                                : "#F2F3F5",
+                                : "#F0EEF8",
                       }}
                     >
                       {player.username}
@@ -291,7 +291,7 @@ export default function LeaderboardPage() {
                     <p
                       className="text-xs"
                       style={{
-                        color: "#9AA0A6",
+                        color: "#8080A0",
                         fontFamily: "'Rajdhani', sans-serif",
                       }}
                     >
@@ -302,8 +302,8 @@ export default function LeaderboardPage() {
                     <span
                       className="text-xs px-2 py-1 rounded"
                       style={{
-                        background: "rgba(214,31,45,0.2)",
-                        color: "#FF2A3A",
+                        background: "rgba(124,58,237,0.2)",
+                        color: "#8B5CF6",
                         fontFamily: "'Orbitron', sans-serif",
                       }}
                     >
@@ -327,7 +327,7 @@ export default function LeaderboardPage() {
             />
             <p
               style={{
-                color: "#9AA0A6",
+                color: "#8080A0",
                 fontFamily: "'Orbitron', sans-serif",
                 fontSize: "0.7rem",
               }}

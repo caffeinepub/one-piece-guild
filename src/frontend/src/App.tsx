@@ -26,7 +26,7 @@ const queryClient = new QueryClient({
 
 const rootRoute = createRootRoute({
   component: () => (
-    <div style={{ background: "#0B0B0D", minHeight: "100vh" }}>
+    <div style={{ background: "#06060E", minHeight: "100vh" }}>
       <Navbar />
       <main>
         <Outlet />

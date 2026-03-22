@@ -26,14 +26,15 @@ export default function ParticleField({ count = 40 }: { count?: number }) {
     resize();
     window.addEventListener("resize", resize);
 
-    const colors = ["#FF2A3A", "#D61F2D", "#FF6B6B", "#FFD700"];
+    // Vibranium / Black Panther particle colors
+    const colors = ["#7C3AED", "#8B5CF6", "#A78BFA", "#C4B5FD", "#D4A017"];
     const particles: Particle[] = Array.from({ length: count }, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
       vx: (Math.random() - 0.5) * 0.5,
       vy: -Math.random() * 1.5 - 0.5,
-      size: Math.random() * 3 + 1,
-      opacity: Math.random() * 0.8 + 0.2,
+      size: Math.random() * 2.5 + 0.8,
+      opacity: Math.random() * 0.7 + 0.2,
       color: colors[Math.floor(Math.random() * colors.length)],
     }));
 
@@ -47,7 +48,7 @@ export default function ParticleField({ count = 40 }: { count?: number }) {
         if (p.y < 0 || p.opacity <= 0) {
           p.y = canvas.height;
           p.x = Math.random() * canvas.width;
-          p.opacity = Math.random() * 0.8 + 0.2;
+          p.opacity = Math.random() * 0.7 + 0.2;
           p.vy = -Math.random() * 1.5 - 0.5;
         }
         ctx.beginPath();

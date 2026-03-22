@@ -37,7 +37,7 @@ export default function TournamentPage() {
   };
 
   return (
-    <div className="min-h-screen pt-20 pb-16" style={{ background: "#0B0B0D" }}>
+    <div className="min-h-screen pt-20 pb-16" style={{ background: "#06060E" }}>
       <div className="max-w-4xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -45,16 +45,16 @@ export default function TournamentPage() {
           className="relative rounded-2xl overflow-hidden mb-8 py-16"
           style={{
             background:
-              "linear-gradient(135deg, #0F0609 0%, #1a0308 50%, #0F0609 100%)",
-            border: "1px solid #6A0F16",
-            boxShadow: "0 0 40px rgba(214,31,45,0.2)",
+              "linear-gradient(135deg, #0A0514 0%, #110824 50%, #0A0514 100%)",
+            border: "1px solid #2D1B69",
+            boxShadow: "0 0 40px rgba(124,58,237,0.2)",
           }}
         >
           <div
             className="absolute inset-0"
             style={{
               background:
-                "radial-gradient(ellipse at center, rgba(214,31,45,0.15) 0%, transparent 70%)",
+                "radial-gradient(ellipse at center, rgba(124,58,237,0.15) 0%, transparent 70%)",
             }}
           />
           <div className="relative text-center px-4">
@@ -69,8 +69,8 @@ export default function TournamentPage() {
               className="heading-gaming"
               style={{
                 fontSize: "clamp(1.8rem, 5vw, 3rem)",
-                color: "#F2F3F5",
-                textShadow: "0 0 20px rgba(255,42,58,0.4)",
+                color: "#F0EEF8",
+                textShadow: "0 0 20px rgba(139,92,246,0.4)",
               }}
             >
               BATTLE ROYALE
@@ -79,7 +79,7 @@ export default function TournamentPage() {
               className="heading-gaming mt-1"
               style={{
                 fontSize: "clamp(0.9rem, 2vw, 1.2rem)",
-                color: "#D61F2D",
+                color: "#7C3AED",
                 letterSpacing: "0.2em",
               }}
             >
@@ -94,13 +94,13 @@ export default function TournamentPage() {
               icon: Calendar,
               label: "DATE",
               value: "APRIL 15, 2026",
-              color: "#9AA0A6",
+              color: "#8080A0",
             },
             {
               icon: IndianRupee,
               label: "ENTRY FEE",
               value: "\u20b950",
-              color: "#FF2A3A",
+              color: "#8B5CF6",
             },
             {
               icon: Trophy,
@@ -118,12 +118,12 @@ export default function TournamentPage() {
             >
               <Icon
                 className="w-8 h-8 mx-auto mb-2"
-                style={{ color: "#D61F2D" }}
+                style={{ color: "#7C3AED" }}
               />
               <p
                 className="text-xs tracking-widest mb-1"
                 style={{
-                  color: "#9AA0A6",
+                  color: "#8080A0",
                   fontFamily: "'Orbitron', sans-serif",
                 }}
               >
@@ -144,7 +144,7 @@ export default function TournamentPage() {
           >
             <h2
               className="heading-gaming text-sm mb-4"
-              style={{ color: "#F2F3F5" }}
+              style={{ color: "#F0EEF8" }}
             >
               PRIZE BREAKDOWN
             </h2>
@@ -157,11 +157,11 @@ export default function TournamentPage() {
                 <div
                   key={place}
                   className="flex justify-between items-center py-2"
-                  style={{ borderBottom: "1px solid #6A0F16" }}
+                  style={{ borderBottom: "1px solid #2D1B69" }}
                 >
                   <span
                     className="heading-gaming text-xs"
-                    style={{ color: "#9AA0A6" }}
+                    style={{ color: "#8080A0" }}
                   >
                     {place}
                   </span>
@@ -183,13 +183,13 @@ export default function TournamentPage() {
                 <Shield
                   className="w-16 h-16"
                   style={{
-                    color: "#D61F2D",
-                    filter: "drop-shadow(0 0 10px rgba(214,31,45,0.6))",
+                    color: "#7C3AED",
+                    filter: "drop-shadow(0 0 10px rgba(124,58,237,0.6))",
                   }}
                 />
                 <p
                   className="heading-gaming text-xs mt-2"
-                  style={{ color: "#F2F3F5" }}
+                  style={{ color: "#F0EEF8" }}
                 >
                   YOUR TEAM
                 </p>
@@ -198,9 +198,9 @@ export default function TournamentPage() {
                 <p
                   className="heading-gaming text-3xl"
                   style={{
-                    color: "#FF2A3A",
+                    color: "#8B5CF6",
                     textShadow:
-                      "0 0 15px #FF2A3A, 0 0 30px rgba(255,42,58,0.5)",
+                      "0 0 15px #8B5CF6, 0 0 30px rgba(139,92,246,0.5)",
                   }}
                 >
                   VS
@@ -216,7 +216,7 @@ export default function TournamentPage() {
                 />
                 <p
                   className="heading-gaming text-xs mt-2"
-                  style={{ color: "#9AA0A6" }}
+                  style={{ color: "#8080A0" }}
                 >
                   CHALLENGERS
                 </p>
@@ -230,23 +230,23 @@ export default function TournamentPage() {
           animate={{ opacity: 1, y: 0 }}
           className="p-5 rounded-xl mb-8"
           style={{
-            background: "rgba(214,31,45,0.1)",
-            border: "1px solid #6A0F16",
+            background: "rgba(124,58,237,0.1)",
+            border: "1px solid #2D1B69",
           }}
           data-ocid="tournament.panel"
         >
           <h3
             className="heading-gaming text-sm mb-3"
-            style={{ color: "#FF2A3A" }}
+            style={{ color: "#8B5CF6" }}
           >
             ⚡ PAYMENT INSTRUCTIONS
           </h3>
           <div
             className="space-y-2 text-sm"
-            style={{ fontFamily: "'Rajdhani', sans-serif", color: "#B0B6BD" }}
+            style={{ fontFamily: "'Rajdhani', sans-serif", color: "#A0A0C0" }}
           >
             <p>
-              1. Send <strong style={{ color: "#FF2A3A" }}>₹50</strong> to UPI
+              1. Send <strong style={{ color: "#8B5CF6" }}>₹50</strong> to UPI
               ID:{" "}
               <strong
                 style={{
@@ -260,7 +260,7 @@ export default function TournamentPage() {
             </p>
             <p>
               2. Include your{" "}
-              <strong style={{ color: "#FF2A3A" }}>Player UID</strong> in the
+              <strong style={{ color: "#8B5CF6" }}>Player UID</strong> in the
               payment note
             </p>
             <p>3. Fill the registration form below with payment reference</p>
@@ -276,7 +276,7 @@ export default function TournamentPage() {
         >
           <h2
             className="heading-gaming text-lg mb-6"
-            style={{ color: "#F2F3F5" }}
+            style={{ color: "#F0EEF8" }}
           >
             REGISTER FOR TOURNAMENT
           </h2>
@@ -292,7 +292,7 @@ export default function TournamentPage() {
                   className="block text-xs mb-2 tracking-widest"
                   style={{
                     fontFamily: "'Orbitron', sans-serif",
-                    color: "#9AA0A6",
+                    color: "#8080A0",
                   }}
                 >
                   PLAYER NAME
@@ -312,7 +312,7 @@ export default function TournamentPage() {
                   className="block text-xs mb-2 tracking-widest"
                   style={{
                     fontFamily: "'Orbitron', sans-serif",
-                    color: "#9AA0A6",
+                    color: "#8080A0",
                   }}
                 >
                   PLAYER UID
@@ -333,7 +333,7 @@ export default function TournamentPage() {
                 className="block text-xs mb-2 tracking-widest"
                 style={{
                   fontFamily: "'Orbitron', sans-serif",
-                  color: "#9AA0A6",
+                  color: "#8080A0",
                 }}
               >
                 GAME LEVEL
@@ -354,7 +354,7 @@ export default function TournamentPage() {
                 className="block text-xs mb-2 tracking-widest"
                 style={{
                   fontFamily: "'Orbitron', sans-serif",
-                  color: "#9AA0A6",
+                  color: "#8080A0",
                 }}
               >
                 PAYMENT NOTE

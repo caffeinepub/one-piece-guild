@@ -58,7 +58,7 @@ export default function ChatPage() {
   return (
     <div
       className="min-h-screen pt-20 pb-4 flex flex-col"
-      style={{ background: "#0B0B0D" }}
+      style={{ background: "#06060E" }}
     >
       <div
         className="max-w-3xl w-full mx-auto px-4 flex flex-col flex-1"
@@ -70,8 +70,8 @@ export default function ChatPage() {
           className="py-6"
         >
           <div className="flex items-center gap-3">
-            <MessageSquare className="w-6 h-6" style={{ color: "#D61F2D" }} />
-            <h1 className="heading-gaming text-xl" style={{ color: "#F2F3F5" }}>
+            <MessageSquare className="w-6 h-6" style={{ color: "#7C3AED" }} />
+            <h1 className="heading-gaming text-xl" style={{ color: "#F0EEF8" }}>
               GUILD CHAT
             </h1>
             <span
@@ -87,7 +87,7 @@ export default function ChatPage() {
           </div>
           <p
             className="text-sm mt-1"
-            style={{ color: "#9AA0A6", fontFamily: "'Rajdhani', sans-serif" }}
+            style={{ color: "#8080A0", fontFamily: "'Rajdhani', sans-serif" }}
           >
             Chat updates every 3 seconds. BOT responds to keywords:
             "tournament", "leader"
@@ -97,8 +97,8 @@ export default function ChatPage() {
         <div
           className="flex-1 rounded-xl p-4 overflow-y-auto mb-4 space-y-3"
           style={{
-            background: "#141519",
-            border: "1px solid #6A0F16",
+            background: "#0D0D18",
+            border: "1px solid #2D1B69",
             minHeight: 0,
             maxHeight: "calc(100vh - 320px)",
           }}
@@ -111,7 +111,7 @@ export default function ChatPage() {
             >
               <p
                 style={{
-                  color: "#9AA0A6",
+                  color: "#8080A0",
                   fontFamily: "'Orbitron', sans-serif",
                   fontSize: "0.7rem",
                 }}
@@ -126,7 +126,7 @@ export default function ChatPage() {
             >
               <p
                 style={{
-                  color: "#9AA0A6",
+                  color: "#8080A0",
                   fontFamily: "'Orbitron', sans-serif",
                   fontSize: "0.7rem",
                 }}
@@ -148,19 +148,19 @@ export default function ChatPage() {
                     <div
                       className="w-8 h-8 rounded-full flex items-center justify-center"
                       style={{
-                        background: "rgba(214,31,45,0.3)",
-                        border: "1px solid #D61F2D",
+                        background: "rgba(124,58,237,0.3)",
+                        border: "1px solid #7C3AED",
                       }}
                     >
-                      <Bot className="w-4 h-4" style={{ color: "#FF2A3A" }} />
+                      <Bot className="w-4 h-4" style={{ color: "#8B5CF6" }} />
                     </div>
                   ) : (
                     <div
                       className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold"
                       style={{
-                        background: "rgba(214,31,45,0.2)",
-                        border: "1px solid #6A0F16",
-                        color: "#F2F3F5",
+                        background: "rgba(124,58,237,0.2)",
+                        border: "1px solid #2D1B69",
+                        color: "#F0EEF8",
                         fontFamily: "'Orbitron', sans-serif",
                       }}
                     >
@@ -173,7 +173,7 @@ export default function ChatPage() {
                     <span
                       className="text-xs font-bold"
                       style={{
-                        color: msg.sender === BOT_NAME ? "#FFD700" : "#FF2A3A",
+                        color: msg.sender === BOT_NAME ? "#FFD700" : "#8B5CF6",
                         fontFamily: "'Orbitron', sans-serif",
                       }}
                     >
@@ -186,7 +186,7 @@ export default function ChatPage() {
                   <p
                     className="text-sm mt-0.5"
                     style={{
-                      color: "#B0B6BD",
+                      color: "#A0A0C0",
                       fontFamily: "'Rajdhani', sans-serif",
                     }}
                   >

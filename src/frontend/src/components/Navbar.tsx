@@ -1,5 +1,5 @@
 import { Link, useRouterState } from "@tanstack/react-router";
-import { Menu, Sword, X } from "lucide-react";
+import { Menu, Shield, X } from "lucide-react";
 import { useState } from "react";
 
 const navLinks = [
@@ -21,21 +21,21 @@ export default function Navbar() {
     <nav
       className="fixed top-0 left-0 right-0 z-50"
       style={{
-        background: "rgba(11, 11, 13, 0.95)",
-        backdropFilter: "blur(10px)",
-        borderBottom: "1px solid #6A0F16",
-        boxShadow: "0 2px 20px rgba(214, 31, 45, 0.2)",
+        background: "rgba(6, 6, 14, 0.95)",
+        backdropFilter: "blur(12px)",
+        borderBottom: "1px solid #2D1B69",
+        boxShadow: "0 2px 24px rgba(124, 58, 237, 0.2)",
       }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center gap-2">
-            <Sword className="w-5 h-5" style={{ color: "#D61F2D" }} />
+            <Shield className="w-5 h-5" style={{ color: "#7C3AED" }} />
             <span
               className="heading-gaming text-lg"
               style={{
-                color: "#FF2A3A",
-                textShadow: "0 0 10px #FF2A3A, 0 0 20px rgba(255,42,58,0.5)",
+                color: "#A78BFA",
+                textShadow: "0 0 10px #8B5CF6, 0 0 20px rgba(139,92,246,0.4)",
               }}
             >
               ONE PIECE
@@ -49,7 +49,7 @@ export default function Navbar() {
                 to={link.to}
                 className={`nav-link ${currentPath === link.to ? "active" : ""}`}
                 style={{
-                  color: currentPath === link.to ? "#F2F3F5" : "#9AA0A6",
+                  color: currentPath === link.to ? "#F0EEF8" : "#8080A0",
                 }}
               >
                 {link.label}
@@ -71,7 +71,7 @@ export default function Navbar() {
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label="Toggle menu"
               data-ocid="nav.toggle"
-              style={{ color: "#D61F2D" }}
+              style={{ color: "#7C3AED" }}
             >
               {menuOpen ? (
                 <X className="w-6 h-6" />
@@ -86,7 +86,7 @@ export default function Navbar() {
       {menuOpen && (
         <div
           className="lg:hidden"
-          style={{ background: "#0F1012", borderTop: "1px solid #6A0F16" }}
+          style={{ background: "#0A0A16", borderTop: "1px solid #2D1B69" }}
         >
           <div className="px-4 py-3 flex flex-col gap-1">
             {navLinks.map((link) => (
@@ -101,14 +101,14 @@ export default function Navbar() {
                   letterSpacing: "0.1em",
                   fontWeight: 600,
                   textTransform: "uppercase",
-                  color: currentPath === link.to ? "#FF2A3A" : "#9AA0A6",
+                  color: currentPath === link.to ? "#A78BFA" : "#8080A0",
                   background:
                     currentPath === link.to
-                      ? "rgba(214,31,45,0.1)"
+                      ? "rgba(124,58,237,0.12)"
                       : "transparent",
                   borderLeft:
                     currentPath === link.to
-                      ? "3px solid #D61F2D"
+                      ? "3px solid #7C3AED"
                       : "3px solid transparent",
                 }}
                 data-ocid="nav.link"

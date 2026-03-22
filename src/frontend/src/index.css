@@ -7,39 +7,39 @@
 @layer base {
   :root {
     --radius: 0.5rem;
-    /* Gaming dark theme - dark mode only */
-    --background: 0.08 0.005 270;
+    /* Black Panther / Vibranium theme */
+    --background: 0.07 0.015 280;
     --foreground: 0.96 0 0;
-    --card: 0.12 0.006 270;
+    --card: 0.11 0.018 280;
     --card-foreground: 0.96 0 0;
-    --popover: 0.12 0.006 270;
+    --popover: 0.11 0.018 280;
     --popover-foreground: 0.96 0 0;
-    --primary: 0.45 0.22 25;
+    --primary: 0.48 0.22 290;
     --primary-foreground: 0.96 0 0;
-    --secondary: 0.15 0.006 270;
+    --secondary: 0.15 0.012 280;
     --secondary-foreground: 0.96 0 0;
-    --muted: 0.15 0.006 270;
+    --muted: 0.15 0.012 280;
     --muted-foreground: 0.65 0 0;
-    --accent: 0.55 0.25 25;
+    --accent: 0.58 0.25 290;
     --accent-foreground: 0.96 0 0;
-    --destructive: 0.45 0.22 25;
+    --destructive: 0.48 0.22 290;
     --destructive-foreground: 0.96 0 0;
-    --border: 0.3 0.15 25;
-    --input: 0.15 0.006 270;
-    --ring: 0.45 0.22 25;
-    --chart-1: 0.55 0.25 25;
+    --border: 0.28 0.12 290;
+    --input: 0.13 0.012 280;
+    --ring: 0.48 0.22 290;
+    --chart-1: 0.58 0.25 290;
     --chart-2: 0.65 0 0;
-    --chart-3: 0.45 0.15 25;
-    --chart-4: 0.35 0.1 25;
+    --chart-3: 0.48 0.15 290;
+    --chart-4: 0.35 0.1 290;
     --chart-5: 0.75 0 0;
-    --sidebar: 0.1 0.005 270;
+    --sidebar: 0.09 0.014 280;
     --sidebar-foreground: 0.96 0 0;
-    --sidebar-primary: 0.45 0.22 25;
+    --sidebar-primary: 0.48 0.22 290;
     --sidebar-primary-foreground: 0.96 0 0;
-    --sidebar-accent: 0.15 0.006 270;
+    --sidebar-accent: 0.15 0.012 280;
     --sidebar-accent-foreground: 0.96 0 0;
-    --sidebar-border: 0.3 0.15 25;
-    --sidebar-ring: 0.45 0.22 25;
+    --sidebar-border: 0.28 0.12 290;
+    --sidebar-ring: 0.48 0.22 290;
   }
 
   * {
@@ -53,63 +53,76 @@
   body {
     @apply bg-background text-foreground;
     font-family: "Rajdhani", sans-serif;
-    background-color: #0b0b0d;
-    color: #f2f3f5;
+    background-color: #06060e;
+    color: #f0eef8;
   }
 }
 
 @layer components {
+  .glow-purple {
+    box-shadow: 0 0 15px #7c3aed, 0 0 30px rgba(124, 58, 237, 0.3);
+  }
+
+  .glow-purple-text {
+    text-shadow: 0 0 10px #8b5cf6, 0 0 20px rgba(139, 92, 246, 0.5);
+  }
+
+  .glow-purple-border {
+    border-color: #7c3aed;
+    box-shadow: 0 0 8px rgba(124, 58, 237, 0.5), inset 0 0 8px
+      rgba(124, 58, 237, 0.1);
+  }
+
+  /* legacy alias so old class names still work */
   .glow-red {
-    box-shadow: 0 0 15px #e0222f, 0 0 30px rgba(224, 34, 47, 0.3);
+    box-shadow: 0 0 15px #7c3aed, 0 0 30px rgba(124, 58, 237, 0.3);
   }
-
   .glow-red-text {
-    text-shadow: 0 0 10px #ff2a3a, 0 0 20px rgba(255, 42, 58, 0.5);
+    text-shadow: 0 0 10px #8b5cf6, 0 0 20px rgba(139, 92, 246, 0.5);
   }
-
   .glow-red-border {
-    border-color: #d61f2d;
-    box-shadow: 0 0 8px rgba(214, 31, 45, 0.5), inset 0 0 8px
-      rgba(214, 31, 45, 0.1);
+    border-color: #7c3aed;
+    box-shadow: 0 0 8px rgba(124, 58, 237, 0.5), inset 0 0 8px
+      rgba(124, 58, 237, 0.1);
   }
 
   .card-gaming {
-    background: linear-gradient(135deg, #141519 0%, #1a1c20 100%);
-    border: 1px solid #6a0f16;
+    background: linear-gradient(135deg, #0d0d18 0%, #11111e 100%);
+    border: 1px solid #2d1b69;
     border-radius: 0.75rem;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
   }
 
   .card-gaming:hover {
-    border-color: #d61f2d;
-    box-shadow: 0 0 15px rgba(214, 31, 45, 0.4);
+    border-color: #7c3aed;
+    box-shadow: 0 0 18px rgba(124, 58, 237, 0.45);
   }
 
   .btn-gaming {
-    background: linear-gradient(135deg, #d61f2d 0%, #a01520 100%);
-    color: #f2f3f5;
+    background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+    color: #f0eef8;
     font-family: "Orbitron", sans-serif;
     font-weight: 700;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     padding: 0.75rem 2rem;
     border-radius: 0.375rem;
-    border: 1px solid #ff2a3a;
-    box-shadow: 0 0 15px rgba(224, 34, 47, 0.5);
+    border: 1px solid #8b5cf6;
+    box-shadow: 0 0 15px rgba(124, 58, 237, 0.5);
     transition: all 0.3s ease;
     cursor: pointer;
   }
 
   .btn-gaming:hover {
-    background: linear-gradient(135deg, #ff2a3a 0%, #d61f2d 100%);
-    box-shadow: 0 0 25px rgba(255, 42, 58, 0.7);
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+    box-shadow: 0 0 28px rgba(139, 92, 246, 0.75);
     transform: translateY(-1px);
   }
 
   .input-gaming {
-    background: #141519;
-    border: 1px solid #6a0f16;
-    color: #f2f3f5;
+    background: #0d0d18;
+    border: 1px solid #2d1b69;
+    color: #f0eef8;
     border-radius: 0.375rem;
     padding: 0.75rem 1rem;
     width: 100%;
@@ -120,12 +133,12 @@
 
   .input-gaming:focus {
     outline: none;
-    border-color: #d61f2d;
-    box-shadow: 0 0 10px rgba(214, 31, 45, 0.5);
+    border-color: #7c3aed;
+    box-shadow: 0 0 12px rgba(124, 58, 237, 0.55);
   }
 
   .input-gaming::placeholder {
-    color: #6b7280;
+    color: #5a5a78;
   }
 
   .heading-gaming {
@@ -141,7 +154,7 @@
     font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: #9aa0a6;
+    color: #8080a0;
     transition: color 0.3s ease;
     position: relative;
   }
@@ -153,14 +166,14 @@
     left: 0;
     width: 0;
     height: 2px;
-    background: #d61f2d;
-    box-shadow: 0 0 8px #ff2a3a;
+    background: #7c3aed;
+    box-shadow: 0 0 8px #8b5cf6;
     transition: width 0.3s ease;
   }
 
   .nav-link:hover,
   .nav-link.active {
-    color: #f2f3f5;
+    color: #f0eef8;
   }
 
   .nav-link:hover::after,
@@ -169,28 +182,28 @@
   }
 
   .rank-gold {
-    color: #ffd700;
-    text-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+    color: #d4a017;
+    text-shadow: 0 0 8px rgba(212, 160, 23, 0.7);
   }
   .rank-silver {
-    color: #c0c0c0;
-    text-shadow: 0 0 8px rgba(192, 192, 192, 0.6);
+    color: #c4b5fd;
+    text-shadow: 0 0 8px rgba(196, 181, 253, 0.6);
   }
   .rank-bronze {
-    color: #cd7f32;
-    text-shadow: 0 0 8px rgba(205, 127, 50, 0.6);
+    color: #a78bfa;
+    text-shadow: 0 0 8px rgba(167, 139, 250, 0.6);
   }
 }
 
 @layer utilities {
   .text-red-glow {
-    color: #ff2a3a;
-    text-shadow: 0 0 10px #ff2a3a, 0 0 20px rgba(255, 42, 58, 0.5);
+    color: #8b5cf6;
+    text-shadow: 0 0 10px #8b5cf6, 0 0 20px rgba(139, 92, 246, 0.5);
   }
 
   .border-red-glow {
-    border-color: #d61f2d;
-    box-shadow: 0 0 10px rgba(214, 31, 45, 0.4);
+    border-color: #7c3aed;
+    box-shadow: 0 0 10px rgba(124, 58, 237, 0.4);
   }
 }
 
@@ -213,21 +226,22 @@
 @keyframes pulse-glow {
   0%,
   100% {
-    box-shadow: 0 0 15px rgba(224, 34, 47, 0.5);
+    box-shadow: 0 0 15px rgba(124, 58, 237, 0.5);
   }
   50% {
-    box-shadow: 0 0 30px rgba(255, 42, 58, 0.8), 0 0 60px rgba(214, 31, 45, 0.3);
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.8), 0 0 60px
+      rgba(124, 58, 237, 0.3);
   }
 }
 
 @keyframes text-pulse {
   0%,
   100% {
-    text-shadow: 0 0 10px #ff2a3a, 0 0 20px rgba(255, 42, 58, 0.5);
+    text-shadow: 0 0 10px #8b5cf6, 0 0 20px rgba(139, 92, 246, 0.5);
   }
   50% {
-    text-shadow: 0 0 20px #ff2a3a, 0 0 40px rgba(255, 42, 58, 0.8), 0 0 60px
-      rgba(214, 31, 45, 0.4);
+    text-shadow: 0 0 20px #a78bfa, 0 0 40px rgba(139, 92, 246, 0.8), 0 0 60px
+      rgba(124, 58, 237, 0.4);
   }
 }
 
@@ -251,12 +265,13 @@
   }
 }
 
-@keyframes scanline {
-  0% {
-    transform: translateY(-100%);
-  }
+@keyframes vibranium-shimmer {
+  0%,
   100% {
-    transform: translateY(100vh);
+    opacity: 0.04;
+  }
+  50% {
+    opacity: 0.1;
   }
 }
 
@@ -274,30 +289,35 @@
 }
 
 .hero-bg {
-  background-image: url("/assets/generated/hero-guild-bg.dim_1920x1080.jpg");
-  background-size: cover;
-  background-position: center;
+  background: linear-gradient(135deg, #06060e 0%, #0d0520 50%, #06060e 100%);
   position: relative;
+  overflow: hidden;
 }
 
 .hero-bg::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(11, 11, 13, 0.4) 0%,
-    rgba(11, 11, 13, 0.6) 50%,
-    rgba(11, 11, 13, 0.95) 100%
-  );
+  background: radial-gradient(
+      ellipse 80% 60% at 50% 0%,
+      rgba(124, 58, 237, 0.18) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 60% 40% at 80% 80%,
+      rgba(167, 139, 250, 0.08) 0%,
+      transparent 60%
+    );
+  pointer-events: none;
 }
 
+/* Wakandan geometric grid */
 .gaming-grid-bg {
-  background-color: #0b0b0d;
+  background-color: #06060e;
   background-image: linear-gradient(
-      rgba(214, 31, 45, 0.05) 1px,
+      rgba(124, 58, 237, 0.06) 1px,
       transparent 1px
-    ), linear-gradient(90deg, rgba(214, 31, 45, 0.05) 1px, transparent 1px);
+    ), linear-gradient(90deg, rgba(124, 58, 237, 0.06) 1px, transparent 1px);
   background-size: 50px 50px;
   animation: grid-move 20s linear infinite;
 }
@@ -307,12 +327,12 @@
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #0b0b0d;
+  background: #06060e;
 }
 ::-webkit-scrollbar-thumb {
-  background: #6a0f16;
+  background: #2d1b69;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #d61f2d;
+  background: #7c3aed;
 }

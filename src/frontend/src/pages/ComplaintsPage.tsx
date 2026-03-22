@@ -37,7 +37,7 @@ export default function ComplaintsPage() {
   };
 
   return (
-    <div className="min-h-screen pt-20 pb-16" style={{ background: "#0B0B0D" }}>
+    <div className="min-h-screen pt-20 pb-16" style={{ background: "#06060E" }}>
       <div className="max-w-3xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -45,17 +45,17 @@ export default function ComplaintsPage() {
           className="py-8"
         >
           <div className="flex items-center gap-3">
-            <AlertTriangle className="w-6 h-6" style={{ color: "#D61F2D" }} />
+            <AlertTriangle className="w-6 h-6" style={{ color: "#7C3AED" }} />
             <h1
               className="heading-gaming text-2xl"
-              style={{ color: "#F2F3F5" }}
+              style={{ color: "#F0EEF8" }}
             >
               COMPLAINTS & SUPPORT
             </h1>
           </div>
           <p
             className="text-sm mt-1"
-            style={{ color: "#9AA0A6", fontFamily: "'Rajdhani', sans-serif" }}
+            style={{ color: "#8080A0", fontFamily: "'Rajdhani', sans-serif" }}
           >
             Submit complaints, reports, or support requests to guild management
           </p>
@@ -68,7 +68,7 @@ export default function ComplaintsPage() {
         >
           <h2
             className="heading-gaming text-sm mb-6"
-            style={{ color: "#F2F3F5" }}
+            style={{ color: "#F0EEF8" }}
           >
             SUBMIT A COMPLAINT
           </h2>
@@ -83,7 +83,7 @@ export default function ComplaintsPage() {
                 className="block text-xs mb-2 tracking-widest"
                 style={{
                   fontFamily: "'Orbitron', sans-serif",
-                  color: "#9AA0A6",
+                  color: "#8080A0",
                 }}
               >
                 YOUR USERNAME
@@ -103,7 +103,7 @@ export default function ComplaintsPage() {
                 className="block text-xs mb-2 tracking-widest"
                 style={{
                   fontFamily: "'Orbitron', sans-serif",
-                  color: "#9AA0A6",
+                  color: "#8080A0",
                 }}
               >
                 MESSAGE
@@ -139,8 +139,8 @@ export default function ComplaintsPage() {
           transition={{ delay: 0.3 }}
         >
           <div className="flex items-center gap-2 mb-4">
-            <MessageCircle className="w-5 h-5" style={{ color: "#D61F2D" }} />
-            <h2 className="heading-gaming text-sm" style={{ color: "#F2F3F5" }}>
+            <MessageCircle className="w-5 h-5" style={{ color: "#7C3AED" }} />
+            <h2 className="heading-gaming text-sm" style={{ color: "#F0EEF8" }}>
               SUBMITTED COMPLAINTS
             </h2>
           </div>
@@ -152,7 +152,7 @@ export default function ComplaintsPage() {
             >
               <p
                 style={{
-                  color: "#9AA0A6",
+                  color: "#8080A0",
                   fontFamily: "'Orbitron', sans-serif",
                   fontSize: "0.7rem",
                 }}
@@ -167,7 +167,7 @@ export default function ComplaintsPage() {
             >
               <p
                 style={{
-                  color: "#9AA0A6",
+                  color: "#8080A0",
                   fontFamily: "'Orbitron', sans-serif",
                   fontSize: "0.7rem",
                 }}
@@ -190,7 +190,7 @@ export default function ComplaintsPage() {
                     <span
                       className="text-sm font-bold"
                       style={{
-                        color: "#FF2A3A",
+                        color: "#8B5CF6",
                         fontFamily: "'Orbitron', sans-serif",
                         fontSize: "0.75rem",
                       }}
@@ -200,7 +200,7 @@ export default function ComplaintsPage() {
                     <span
                       className="text-xs"
                       style={{
-                        color: "#9AA0A6",
+                        color: "#8080A0",
                         fontFamily: "'Rajdhani', sans-serif",
                       }}
                     >
@@ -210,7 +210,7 @@ export default function ComplaintsPage() {
                   <p
                     className="text-sm"
                     style={{
-                      color: "#B0B6BD",
+                      color: "#A0A0C0",
                       fontFamily: "'Rajdhani', sans-serif",
                     }}
                   >

@@ -10,13 +10,12 @@ interface Message {
 
 function getAIReply(input: string): string {
   const q = input.toLowerCase();
-
   if (
     q.includes("tournament") ||
     q.includes("register") ||
     q.includes("registration")
   ) {
-    return "Tournament mein register karne ke liye Tournament page par jao. Entry fee \u20b950 hai. UPI ID 9328343183 par payment karo aur apna UID note mein likho. 24 ghante mein confirmation milegi.";
+    return "Tournament mein register karne ke liye Tournament page par jao. Entry fee ₹50 hai. UPI ID 9328343183 par payment karo aur apna UID note mein likho. 24 ghante mein confirmation milegi.";
   }
   if (
     q.includes("upi") ||
@@ -24,7 +23,7 @@ function getAIReply(input: string): string {
     q.includes("pay") ||
     q.includes("fee")
   ) {
-    return "Tournament entry fee \u20b950 hai. Payment ke liye UPI ID: 9328343183 use karo. Payment ke baad apna transaction ID registration form mein dalo.";
+    return "Tournament entry fee ₹50 hai. Payment ke liye UPI ID: 9328343183 use karo. Payment ke baad apna transaction ID registration form mein dalo.";
   }
   if (q.includes("join") || q.includes("guild") || q.includes("member")) {
     return "ONE PIECE Guild join karne ke liye Join page par jao aur apna in-game name, UID aur game level fill karo. Our leaders review karenge aur confirm karenge!";
@@ -49,7 +48,7 @@ function getAIReply(input: string): string {
     return "Guild leaderboard dekhne ke liye Leaderboard page par jao. Wahan top players aur unke kills/wins dekh sakte ho!";
   }
   if (q.includes("chat") || q.includes("message") || q.includes("talk")) {
-    return "Guild members se baat karne ke liye Guild Chat page par jao. Wahan real-time messages bhej sakte ho. 'tournament' ya 'leader' type karo BOT se info paane ke liye!";
+    return "Guild members se baat karne ke liye Guild Chat page par jao. Wahan real-time messages bhej sakte ho.";
   }
   if (
     q.includes("prize") ||
@@ -57,7 +56,7 @@ function getAIReply(input: string): string {
     q.includes("win") ||
     q.includes("winner")
   ) {
-    return "Tournament prize pool \u20b9500 hai! 1st place: \u20b9300, 2nd place: \u20b9150, 3rd place: \u20b950. Participate karo aur jeeto!";
+    return "Tournament prize pool ₹500 hai! 1st place: ₹300, 2nd place: ₹150, 3rd place: ₹50. Participate karo aur jeeto!";
   }
   if (
     q.includes("hello") ||
@@ -120,9 +119,10 @@ export default function AIAssistant() {
         whileTap={{ scale: 0.95 }}
         className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center shadow-lg"
         style={{
-          background: "linear-gradient(135deg, #D61F2D, #8B0000)",
-          boxShadow: "0 0 20px rgba(214,31,45,0.6), 0 4px 15px rgba(0,0,0,0.5)",
-          border: "1px solid #FF2A3A",
+          background: "linear-gradient(135deg, #7C3AED, #5B21B6)",
+          boxShadow:
+            "0 0 22px rgba(124,58,237,0.65), 0 4px 15px rgba(0,0,0,0.5)",
+          border: "1px solid #8B5CF6",
         }}
         aria-label="AI Assistant"
       >
@@ -143,10 +143,10 @@ export default function AIAssistant() {
             transition={{ duration: 0.25 }}
             className="fixed bottom-24 right-6 z-50 w-80 rounded-2xl overflow-hidden flex flex-col"
             style={{
-              background: "#141519",
-              border: "1px solid #6A0F16",
+              background: "#0D0D18",
+              border: "1px solid #2D1B69",
               boxShadow:
-                "0 0 30px rgba(214,31,45,0.3), 0 10px 40px rgba(0,0,0,0.6)",
+                "0 0 32px rgba(124,58,237,0.35), 0 10px 40px rgba(0,0,0,0.6)",
               height: "420px",
             }}
           >
@@ -154,24 +154,24 @@ export default function AIAssistant() {
             <div
               className="px-4 py-3 flex items-center gap-3"
               style={{
-                background: "linear-gradient(135deg, #1a0308, #0F0609)",
-                borderBottom: "1px solid #6A0F16",
+                background: "linear-gradient(135deg, #110824, #0A0514)",
+                borderBottom: "1px solid #2D1B69",
               }}
             >
               <div
                 className="w-8 h-8 rounded-full flex items-center justify-center"
                 style={{
-                  background: "rgba(214,31,45,0.3)",
-                  border: "1px solid #D61F2D",
+                  background: "rgba(124,58,237,0.3)",
+                  border: "1px solid #7C3AED",
                 }}
               >
-                <Bot className="w-4 h-4" style={{ color: "#FF2A3A" }} />
+                <Bot className="w-4 h-4" style={{ color: "#A78BFA" }} />
               </div>
               <div>
                 <p
                   className="text-xs font-bold"
                   style={{
-                    color: "#F2F3F5",
+                    color: "#F0EEF8",
                     fontFamily: "'Orbitron', sans-serif",
                   }}
                 >
@@ -201,13 +201,13 @@ export default function AIAssistant() {
                     style={{
                       background:
                         msg.role === "user"
-                          ? "rgba(214,31,45,0.25)"
+                          ? "rgba(124,58,237,0.25)"
                           : "rgba(255,255,255,0.06)",
                       border:
                         msg.role === "user"
-                          ? "1px solid #6A0F16"
+                          ? "1px solid #2D1B69"
                           : "1px solid rgba(255,255,255,0.08)",
-                      color: "#D0D5DB",
+                      color: "#C4B5FD",
                       fontFamily: "'Rajdhani', sans-serif",
                       lineHeight: 1.4,
                     }}
@@ -223,7 +223,7 @@ export default function AIAssistant() {
             <form
               onSubmit={sendMessage}
               className="p-3 flex gap-2"
-              style={{ borderTop: "1px solid #6A0F16" }}
+              style={{ borderTop: "1px solid #2D1B69" }}
             >
               <input
                 className="input-gaming flex-1 text-sm"

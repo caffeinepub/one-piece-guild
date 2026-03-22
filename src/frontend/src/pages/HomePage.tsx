@@ -12,10 +12,25 @@ export default function HomePage() {
   const recentMessages = chatMessages?.slice(-4) ?? [];
 
   return (
-    <div style={{ background: "#0B0B0D" }}>
+    <div style={{ background: "#06060E" }}>
       {/* Hero */}
       <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden hero-bg">
-        <ParticleField count={50} />
+        <ParticleField count={55} />
+        {/* Vibranium glow orb */}
+        <div
+          className="absolute"
+          style={{
+            width: "600px",
+            height: "600px",
+            borderRadius: "50%",
+            background:
+              "radial-gradient(circle, rgba(124,58,237,0.12) 0%, transparent 70%)",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%,-50%)",
+            pointerEvents: "none",
+          }}
+        />
         <div className="relative z-10 text-center px-4">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
@@ -26,11 +41,11 @@ export default function HomePage() {
               className="text-xs tracking-[0.3em] mb-4"
               style={{
                 fontFamily: "'Orbitron', sans-serif",
-                color: "#D61F2D",
-                textShadow: "0 0 8px rgba(214,31,45,0.6)",
+                color: "#7C3AED",
+                textShadow: "0 0 8px rgba(124,58,237,0.6)",
               }}
             >
-              FREE FIRE GUILD \u2022 UID: 3049611812
+              FREE FIRE GUILD • UID: 3049611812
             </p>
           </motion.div>
 
@@ -42,14 +57,14 @@ export default function HomePage() {
             style={{
               fontSize: "clamp(3rem, 10vw, 7rem)",
               lineHeight: 1,
-              color: "#F2F3F5",
+              color: "#F0EEF8",
               letterSpacing: "0.05em",
             }}
           >
             <span
               style={{
-                color: "#FF2A3A",
-                textShadow: "0 0 20px #FF2A3A, 0 0 40px rgba(255,42,58,0.5)",
+                color: "#A78BFA",
+                textShadow: "0 0 20px #8B5CF6, 0 0 40px rgba(139,92,246,0.5)",
               }}
             >
               ONE
@@ -64,11 +79,11 @@ export default function HomePage() {
             className="heading-gaming mt-2 mb-6"
             style={{
               fontSize: "clamp(0.9rem, 3vw, 1.4rem)",
-              color: "#9AA0A6",
+              color: "#8080A0",
               letterSpacing: "0.3em",
             }}
           >
-            DOMINATING THE BATTLEFIELD
+            WAKANDA FOREVER
           </motion.h2>
 
           <motion.p
@@ -78,7 +93,7 @@ export default function HomePage() {
             className="text-base mb-8 max-w-lg mx-auto"
             style={{
               fontFamily: "'Rajdhani', sans-serif",
-              color: "#B0B6BD",
+              color: "#A0A0C0",
               fontSize: "1.1rem",
             }}
           >
@@ -104,7 +119,7 @@ export default function HomePage() {
               data-ocid="home.secondary_button"
               style={{
                 background: "transparent",
-                border: "1px solid #6A0F16",
+                border: "1px solid #2D1B69",
                 boxShadow: "none",
               }}
             >
@@ -116,7 +131,7 @@ export default function HomePage() {
         <div
           className="absolute bottom-0 left-0 right-0 h-32"
           style={{
-            background: "linear-gradient(to bottom, transparent, #0B0B0D)",
+            background: "linear-gradient(to bottom, transparent, #06060E)",
           }}
         />
       </section>
@@ -125,9 +140,9 @@ export default function HomePage() {
       <section
         className="py-8"
         style={{
-          background: "#0F1012",
-          borderTop: "1px solid #6A0F16",
-          borderBottom: "1px solid #6A0F16",
+          background: "#0A0A16",
+          borderTop: "1px solid #2D1B69",
+          borderBottom: "1px solid #2D1B69",
         }}
       >
         <div className="max-w-7xl mx-auto px-4">
@@ -136,7 +151,7 @@ export default function HomePage() {
               {
                 icon: Users,
                 label: "GUILD MEMBERS",
-                value: leaderboard?.length ?? "\u2014",
+                value: leaderboard?.length ?? "—",
               },
               { icon: Trophy, label: "TOURNAMENTS WON", value: "12" },
               { icon: Shield, label: "GUILD LEVEL", value: "98" },
@@ -151,13 +166,13 @@ export default function HomePage() {
               >
                 <Icon
                   className="w-6 h-6 mx-auto mb-2"
-                  style={{ color: "#D61F2D" }}
+                  style={{ color: "#7C3AED" }}
                 />
                 <p
                   className="heading-gaming text-2xl"
                   style={{
-                    color: "#FF2A3A",
-                    textShadow: "0 0 8px rgba(255,42,58,0.5)",
+                    color: "#A78BFA",
+                    textShadow: "0 0 8px rgba(139,92,246,0.5)",
                   }}
                 >
                   {String(value)}
@@ -165,7 +180,7 @@ export default function HomePage() {
                 <p
                   className="text-xs tracking-widest mt-1"
                   style={{
-                    color: "#9AA0A6",
+                    color: "#8080A0",
                     fontFamily: "'Orbitron', sans-serif",
                   }}
                 >
@@ -190,16 +205,16 @@ export default function HomePage() {
               data-ocid="home.card"
             >
               <div className="flex items-center gap-2 mb-4">
-                <Trophy className="w-5 h-5" style={{ color: "#D61F2D" }} />
+                <Trophy className="w-5 h-5" style={{ color: "#7C3AED" }} />
                 <h3
                   className="heading-gaming text-sm"
-                  style={{ color: "#F2F3F5" }}
+                  style={{ color: "#F0EEF8" }}
                 >
                   TOP PLAYERS
                 </h3>
               </div>
               {topPlayers.length === 0 ? (
-                <p className="text-sm" style={{ color: "#9AA0A6" }}>
+                <p className="text-sm" style={{ color: "#8080A0" }}>
                   No players yet. Be the first!
                 </p>
               ) : (
@@ -213,14 +228,14 @@ export default function HomePage() {
                       <div className="flex items-center gap-3">
                         <span
                           className={`heading-gaming text-sm w-6 text-center ${i === 0 ? "rank-gold" : i === 1 ? "rank-silver" : i === 2 ? "rank-bronze" : ""}`}
-                          style={{ color: i > 2 ? "#9AA0A6" : undefined }}
+                          style={{ color: i > 2 ? "#8080A0" : undefined }}
                         >
                           #{i + 1}
                         </span>
                         <span
                           className="text-sm"
                           style={{
-                            color: "#F2F3F5",
+                            color: "#F0EEF8",
                             fontFamily: "'Rajdhani', sans-serif",
                           }}
                         >
@@ -230,8 +245,8 @@ export default function HomePage() {
                       <span
                         className="text-xs px-2 py-1 rounded"
                         style={{
-                          background: "rgba(214,31,45,0.2)",
-                          color: "#FF2A3A",
+                          background: "rgba(124,58,237,0.2)",
+                          color: "#A78BFA",
                           fontFamily: "'Orbitron', sans-serif",
                         }}
                       >
@@ -246,13 +261,13 @@ export default function HomePage() {
                 className="block mt-4 text-xs text-center py-2 rounded"
                 style={{
                   fontFamily: "'Orbitron', sans-serif",
-                  color: "#D61F2D",
-                  border: "1px solid #6A0F16",
+                  color: "#7C3AED",
+                  border: "1px solid #2D1B69",
                   letterSpacing: "0.1em",
                 }}
                 data-ocid="home.link"
               >
-                FULL LEADERBOARD \u2192
+                FULL LEADERBOARD →
               </Link>
             </motion.div>
 
@@ -264,17 +279,17 @@ export default function HomePage() {
               className="card-gaming p-6"
             >
               <div className="flex items-center gap-2 mb-4">
-                <Zap className="w-5 h-5" style={{ color: "#D61F2D" }} />
+                <Zap className="w-5 h-5" style={{ color: "#7C3AED" }} />
                 <h3
                   className="heading-gaming text-sm"
-                  style={{ color: "#F2F3F5" }}
+                  style={{ color: "#F0EEF8" }}
                 >
                   GUILD CHAT
                 </h3>
               </div>
               <div className="space-y-3 min-h-[120px]">
                 {recentMessages.length === 0 ? (
-                  <p className="text-sm" style={{ color: "#9AA0A6" }}>
+                  <p className="text-sm" style={{ color: "#8080A0" }}>
                     No messages yet. Start chatting!
                   </p>
                 ) : (
@@ -284,10 +299,10 @@ export default function HomePage() {
                       className="text-sm"
                       style={{ fontFamily: "'Rajdhani', sans-serif" }}
                     >
-                      <span style={{ color: "#FF2A3A", fontWeight: 700 }}>
+                      <span style={{ color: "#A78BFA", fontWeight: 700 }}>
                         {msg.sender}:{" "}
                       </span>
-                      <span style={{ color: "#B0B6BD" }}>{msg.content}</span>
+                      <span style={{ color: "#A0A0C0" }}>{msg.content}</span>
                     </div>
                   ))
                 )}
@@ -297,13 +312,13 @@ export default function HomePage() {
                 className="block mt-4 text-xs text-center py-2 rounded"
                 style={{
                   fontFamily: "'Orbitron', sans-serif",
-                  color: "#D61F2D",
-                  border: "1px solid #6A0F16",
+                  color: "#7C3AED",
+                  border: "1px solid #2D1B69",
                   letterSpacing: "0.1em",
                 }}
                 data-ocid="home.secondary_button"
               >
-                OPEN CHAT \u2192
+                OPEN CHAT →
               </Link>
             </motion.div>
 
@@ -318,14 +333,14 @@ export default function HomePage() {
                 className="absolute top-0 right-0 w-32 h-32 rounded-full"
                 style={{
                   background:
-                    "radial-gradient(circle, rgba(214,31,45,0.2) 0%, transparent 70%)",
+                    "radial-gradient(circle, rgba(124,58,237,0.2) 0%, transparent 70%)",
                 }}
               />
               <div className="flex items-center gap-2 mb-4">
-                <Shield className="w-5 h-5" style={{ color: "#D61F2D" }} />
+                <Shield className="w-5 h-5" style={{ color: "#7C3AED" }} />
                 <h3
                   className="heading-gaming text-sm"
-                  style={{ color: "#F2F3F5" }}
+                  style={{ color: "#F0EEF8" }}
                 >
                   TOURNAMENT
                 </h3>
@@ -333,20 +348,20 @@ export default function HomePage() {
               <div
                 className="text-center py-4 mb-4 rounded-lg"
                 style={{
-                  background: "rgba(214,31,45,0.1)",
-                  border: "1px solid #6A0F16",
+                  background: "rgba(124,58,237,0.1)",
+                  border: "1px solid #2D1B69",
                 }}
               >
                 <p
                   className="heading-gaming text-xl"
-                  style={{ color: "#FF2A3A" }}
+                  style={{ color: "#A78BFA" }}
                 >
                   BATTLE ROYALE
                 </p>
                 <p
                   className="text-sm mt-1"
                   style={{
-                    color: "#9AA0A6",
+                    color: "#8080A0",
                     fontFamily: "'Rajdhani', sans-serif",
                   }}
                 >
@@ -357,29 +372,29 @@ export default function HomePage() {
                 <div>
                   <p
                     style={{
-                      color: "#9AA0A6",
+                      color: "#8080A0",
                       fontFamily: "'Rajdhani', sans-serif",
                       fontSize: "0.75rem",
                     }}
                   >
                     ENTRY FEE
                   </p>
-                  <p className="heading-gaming" style={{ color: "#F2F3F5" }}>
-                    \u20b950
+                  <p className="heading-gaming" style={{ color: "#F0EEF8" }}>
+                    ₹50
                   </p>
                 </div>
                 <div className="text-right">
                   <p
                     style={{
-                      color: "#9AA0A6",
+                      color: "#8080A0",
                       fontFamily: "'Rajdhani', sans-serif",
                       fontSize: "0.75rem",
                     }}
                   >
                     PRIZE POOL
                   </p>
-                  <p className="heading-gaming" style={{ color: "#FFD700" }}>
-                    \u20b9500
+                  <p className="heading-gaming" style={{ color: "#D4A017" }}>
+                    ₹500
                   </p>
                 </div>
               </div>
